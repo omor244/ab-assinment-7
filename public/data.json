@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Shakib Al Hasan",
+    "country": "Bangladesh",
+    "player_img": "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/3/37/Shakib_Al_Hasan_IMG.jpg",
+    "role": "all-rounder",
+    "batting_hand": "left-hand",
+    "price": 950000,
+    "bowling_type": "right-arm offbreak"
+  },
+  {
+    "name": "Virat Kohli",
+    "country": "India",
+    "player_img": "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/4/4e/Virat_Kohli_2018.jpg",
+    "role": "batsman",
+    "batting_hand": "right-hand",
+    "price": 1200000,
+    "bowling_type": null
+  },
+  {
+    "name": "David Warner",
+    "country": "Australia",
+    "player_img": "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/7/7a/David_Warner_2015.jpg",
+    "role": "batsman",
+    "batting_hand": "left-hand",
+    "price": 950000,
+    "bowling_type": null
+  },
+  {
+    "name": "Jofra Archer",
+    "country": "England",
+    "player_img": "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/6/6e/Jofra_Archer_2019.jpg",
+    "role": "bowler",
+    "batting_hand": "right-hand",
+    "price": 1100000,
+    "bowling_type": "fast bowler"
+  },
+  {
+    "name": "Shadab Khan",
+    "country": "Pakistan",
+    "player_img": "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/e/e2/Shadab_Khan_%28cropped%29.jpg",
+    "role": "bowler",
+    "batting_hand": "right-hand",
+    "price": 750000,
+    "bowling_type": "leg spin"
+  },
+  {
+    "name": "Quinton de Kock",
+    "country": "South Africa",
+    "player_img": "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/1/12/Quinton_de_Kock_World_Cup_2015.jpg",
+    "role": "batsman",
+    "batting_hand": "left-hand",
+    "price": 890000,
+    "bowling_type": null
+  }
+]
