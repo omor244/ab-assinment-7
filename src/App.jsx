@@ -1,5 +1,5 @@
 
-import { useEffect, useState } from 'react'
+import {  useState } from 'react'
 import './App.css'
 import Banner from './componant/header/Banner'
 import Navber from './componant/header/navber'
@@ -11,14 +11,24 @@ function App() {
     Cart: true,
     status: "available"
   })
-  const [availableplayer, setavailableplayer] = useState([])
+// console.log(isactive)
+  const [addcoin, setconin] = useState(0)
 
-  useEffect(() =>{
-    fetch()
-  },[])
+  const [selectedplayer, setselectedplayer] = useState([])
+  
+  
+  
+ 
+const handeladdcoin = (coin) =>{
+  const coins = parseFloat(coin)
+  setconin(coins)
+}
 
 
-const handelisactive = ( status ) =>{
+
+const handelisactive = ( status) =>{
+  
+
   console.log(status)
   if(status === 'available'){
     setisactive({
@@ -33,16 +43,30 @@ setisactive({
     })
   }
 }
+
+const handelselectedplayer = (player, price) =>{
+  const newplayer = [...selectedplayer, player]
+  // const usecoin = 
+  if(addcoin - price > 0){
+    setselectedplayer(newplayer)
+  }
+  
+}
+
+const handelDeleteplayer = (id) =>{
+ const remainingplayer = selectedplayer.filter((p) =>p.id !== id)
+   setselectedplayer(remainingplayer)
+}
  
 
   return (
     <>
       <div>
-           <Navber></Navber>
-           <Banner></Banner>
+           <Navber addcoin={addcoin}></Navber>
+           <Banner handeladdcoin={handeladdcoin}></Banner>
       </div>
       <div>
-          <Main isactive={isactive} handelisactive={handelisactive}></Main>
+          <Main isactive={isactive}  handelisactive={handelisactive} handelselectedplayer={handelselectedplayer} selectedplayer={selectedplayer} handelDeleteplayer={handelDeleteplayer}></Main>
          
       </div>
     </>

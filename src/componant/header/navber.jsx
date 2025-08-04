@@ -2,7 +2,7 @@ import assets from '../../assets/logo.png'
 import { BsCoin } from "react-icons/bs";
 
 
-const Navber = () => {
+const Navber = ({addcoin}) => {
     return (
         <div className='w-10/12 mx-auto'>
            
@@ -18,7 +18,7 @@ const Navber = () => {
           <li><a href="/about"> Teams</a></li>
           <li><a href="/about"> About</a></li>
           <li><a href="/about"> Schedules</a></li>
-          <li ><a className='flex items-center gap-2 text-[#131313] font-bold' href="/about"> 0 Coin <span className='bg-yellow-200 text-2xl'><BsCoin /></span></a></li>
+          <li ><a className='flex items-center gap-2 text-[#131313] font-bold' href="/about"> <span className='text-blue-600 font-normal'>{addcoin}</span> Coin <span className='bg-yellow-200 text-2xl'><BsCoin /></span></a></li>
         </ul>
 
       </div>

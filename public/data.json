@@ -1,53 +1,58 @@
 [
-  {
+  {  "id": 1,
     "name": "Shakib Al Hasan",
     "country": "Bangladesh",
-    "player_img": "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/3/37/Shakib_Al_Hasan_IMG.jpg",
+    "player_img": "https://i.ibb.co/JFBDghpj/shakib-cropped-1lwt1in8l8o41smoihlbo9hja-jpg.webp",
     "role": "all-rounder",
     "batting_hand": "left-hand",
     "price": 950000,
-    "bowling_type": "right-arm offbreak"
+    "bowling_type": "right-arm "
   },
-  {
+  { 
+    "id": 2,
     "name": "Virat Kohli",
     "country": "India",
-    "player_img": "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/4/4e/Virat_Kohli_2018.jpg",
+    "player_img": "https://i.ibb.co/xqQCPzWq/Virat-Kohli.jpg",
     "role": "batsman",
     "batting_hand": "right-hand",
     "price": 1200000,
     "bowling_type": null
   },
-  {
+  { 
+    "id": 3,
     "name": "David Warner",
     "country": "Australia",
-    "player_img": "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/7/7a/David_Warner_2015.jpg",
+    "player_img": "https://i.ibb.co/MkgMrp5n/David-Warner.jpg",
     "role": "batsman",
     "batting_hand": "left-hand",
     "price": 950000,
     "bowling_type": null
   },
-  {
+  { 
+    "id": 4,
     "name": "Jofra Archer",
     "country": "England",
-    "player_img": "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/6/6e/Jofra_Archer_2019.jpg",
+    "player_img": "https://i.ibb.co/FLCWDwj2/Jofra-Archer.jpg",
     "role": "bowler",
     "batting_hand": "right-hand",
     "price": 1100000,
     "bowling_type": "fast bowler"
   },
-  {
+  { 
+    "id": 5,
     "name": "Shadab Khan",
     "country": "Pakistan",
-    "player_img": "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/e/e2/Shadab_Khan_%28cropped%29.jpg",
+    "player_img": "https://i.ibb.co/fVZdxw8c/Shadab-Khan.jpg",
     "role": "bowler",
     "batting_hand": "right-hand",
     "price": 750000,
     "bowling_type": "leg spin"
   },
-  {
+  { 
+    "id": 6,
     "name": "Quinton de Kock",
     "country": "South Africa",
-    "player_img": "https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/1/12/Quinton_de_Kock_World_Cup_2015.jpg",
+    "player_img": "https://i.ibb.co/V0jyjcnd/Quinton-de-Kock.jpg",
     "role": "batsman",
     "batting_hand": "left-hand",
     "price": 890000,

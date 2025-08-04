@@ -1,9 +1,14 @@
-import React from 'react';
+import Showselectedplayer from "./Showselectedplayer";
 
-const Selected = () => {
+
+
+const Selected = ({selectedplayer,handelDeleteplayer}) => {
     return (
         <div>
-             <h1>this is Selected</h1>
+             <h1>Selected Player ({selectedplayer.length}/6)</h1>
+             {
+                selectedplayer.map(p =><Showselectedplayer handelDeleteplayer={handelDeleteplayer} key={p.id} p={p}></Showselectedplayer>)
+             }
         </div>
     );
 };

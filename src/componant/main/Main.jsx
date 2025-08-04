@@ -3,7 +3,8 @@ import Selected from "./Selected";
 import "./css/Main.css"
 
 
-const Main = ({ handelisactive, isactive }) => {
+
+const Main = ({ handelisactive, isactive,handelselectedplayer,selectedplayer,handelDeleteplayer}) => {
   return (
     <div className="w-10/12 mx-auto mt-10">
       <div className=" bg-base-100 flex justify-between">
@@ -17,8 +18,10 @@ const Main = ({ handelisactive, isactive }) => {
       </div>
       
         {
-          isactive.Cart ? <Available></Available> : <Selected></Selected>
+          isactive.Cart ? <Available handelselectedplayer={handelselectedplayer} ></Available> : <Selected selectedplayer={selectedplayer} handelDeleteplayer={handelDeleteplayer}></Selected>
         }
+
+       
       
     </div>
   );
