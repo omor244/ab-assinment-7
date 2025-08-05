@@ -1,5 +1,5 @@
 
-import {  useState } from 'react'
+import { useState } from 'react'
 import './App.css'
 import Banner from './componant/header/Banner'
 import Navber from './componant/header/navber'
@@ -14,75 +14,75 @@ function App() {
     Cart: true,
     status: "available"
   })
-// console.log(isactive)
+  // console.log(isactive)
   const [addcoin, setconin] = useState(0)
 
- 
+
 
   const [selectedplayer, setselectedplayer] = useState([])
-  
-  
-  
- 
-const handeladdcoin = (addcoins) =>{
-  setconin(addcoins)
-  
-}
 
 
 
-const handelisactive = ( status) =>{
-  
 
-  console.log(status)
-  if(status === 'available'){
-    setisactive({
-      Cart: true,
-    status: "available"
-    })
+  const handeladdcoin = (addcoins) => {
+    setconin(addcoins)
+
   }
-  else{
-setisactive({
-      Cart: false,
-    status: "selected"
-    })
-  }
-}
 
-const handelselectedplayer = (player) =>{
-  console.log(player)
- 
-  const newplayer = [...selectedplayer, player]
-  
-  const usecoin = addcoin - player.price 
-  setconin(usecoin)
-  if(usecoin > 0){
-    setselectedplayer(newplayer)
-    toast('Saved successfully!')
-  }
-  else if(usecoin < 0){
-    
-    setconin(addcoin)
-   
-  }
-  
-}
 
-const handelDeleteplayer = (id) =>{
- const remainingplayer = selectedplayer.filter((p) =>p.id !== id)
-   setselectedplayer(remainingplayer)
-}
- 
+
+  const handelisactive = (status) => {
+
+
+    console.log(status)
+    if (status === 'available') {
+      setisactive({
+        Cart: true,
+        status: "available"
+      })
+    }
+    else {
+      setisactive({
+        Cart: false,
+        status: "selected"
+      })
+    }
+  }
+
+  const handelselectedplayer = (player) => {
+    console.log(player)
+
+    const newplayer = [...selectedplayer, player]
+
+    const usecoin = addcoin - player.price
+    setconin(usecoin)
+    if (usecoin > 0) {
+      setselectedplayer(newplayer)
+      toast('Saved successfully!')
+    }
+    else if (usecoin < 0) {
+
+      setconin(addcoin)
+      toast('You do not have enough Money!')
+    }
+
+  }
+
+  const handelDeleteplayer = (id) => {
+    const remainingplayer = selectedplayer.filter((p) => p.id !== id)
+    setselectedplayer(remainingplayer)
+  }
+
 
   return (
     <>
       <div>
-           <Navber addcoin={addcoin}></Navber>
-           <Banner addcoin={addcoin}  handeladdcoin={handeladdcoin}></Banner>
+        <Navber addcoin={addcoin}></Navber>
+        <Banner addcoin={addcoin} handeladdcoin={handeladdcoin}></Banner>
       </div>
       <div>
-          <Main isactive={isactive}  handelisactive={handelisactive} handelselectedplayer={handelselectedplayer} selectedplayer={selectedplayer} handelDeleteplayer={handelDeleteplayer}></Main>
-         
+        <Main isactive={isactive} handelisactive={handelisactive} handelselectedplayer={handelselectedplayer} selectedplayer={selectedplayer} handelDeleteplayer={handelDeleteplayer}></Main>
+
       </div>
       <ToastContainer></ToastContainer>
     </>
