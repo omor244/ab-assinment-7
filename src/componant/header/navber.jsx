@@ -3,6 +3,7 @@ import { BsCoin } from "react-icons/bs";
 
 
 const Navber = ({addcoin}) => {
+  
     return (
         <div className='w-10/12 mx-auto'>
            

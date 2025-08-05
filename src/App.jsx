@@ -4,6 +4,9 @@ import './App.css'
 import Banner from './componant/header/Banner'
 import Navber from './componant/header/navber'
 import Main from './componant/main/Main'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 function App() {
@@ -14,14 +17,16 @@ function App() {
 // console.log(isactive)
   const [addcoin, setconin] = useState(0)
 
+ 
+
   const [selectedplayer, setselectedplayer] = useState([])
   
   
   
  
-const handeladdcoin = (coin) =>{
-  const coins = parseFloat(coin)
-  setconin(coins)
+const handeladdcoin = (addcoins) =>{
+  setconin(addcoins)
+  
 }
 
 
@@ -44,11 +49,21 @@ setisactive({
   }
 }
 
-const handelselectedplayer = (player, price) =>{
+const handelselectedplayer = (player) =>{
+  console.log(player)
+ 
   const newplayer = [...selectedplayer, player]
-  // const usecoin = 
-  if(addcoin - price > 0){
+  
+  const usecoin = addcoin - player.price 
+  setconin(usecoin)
+  if(usecoin > 0){
     setselectedplayer(newplayer)
+    toast('Saved successfully!')
+  }
+  else if(usecoin < 0){
+    
+    setconin(addcoin)
+   
   }
   
 }
@@ -63,12 +78,13 @@ const handelDeleteplayer = (id) =>{
     <>
       <div>
            <Navber addcoin={addcoin}></Navber>
-           <Banner handeladdcoin={handeladdcoin}></Banner>
+           <Banner addcoin={addcoin}  handeladdcoin={handeladdcoin}></Banner>
       </div>
       <div>
           <Main isactive={isactive}  handelisactive={handelisactive} handelselectedplayer={handelselectedplayer} selectedplayer={selectedplayer} handelDeleteplayer={handelDeleteplayer}></Main>
          
       </div>
+      <ToastContainer></ToastContainer>
     </>
   )
 }
