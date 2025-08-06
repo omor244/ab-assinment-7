@@ -22,7 +22,16 @@ function App() {
   const [selectedplayer, setselectedplayer] = useState([])
 
 
-
+ const topCenter = () => {
+    toast.info(' add money👋!', {
+      position: 'top-center',
+    });
+  };
+   const topRight = () => {
+    toast.success('Successfully 👋!', {
+      position: 'top-center',
+    });
+  };
 
   const handeladdcoin = (addcoins) => {
     setconin(addcoins)
@@ -58,12 +67,14 @@ function App() {
     setconin(usecoin)
     if (usecoin > 0) {
       setselectedplayer(newplayer)
-      toast('Saved successfully!')
+       topRight()
+      
     }
     else if (usecoin < 0) {
 
       setconin(addcoin)
-      toast('You do not have enough Money!')
+      // toast('You do not have enough Money!')
+      topCenter()
     }
 
   }
